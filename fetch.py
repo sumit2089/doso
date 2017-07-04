@@ -3,7 +3,11 @@ import os
 import sys
 
 def stripEndAmps(url):
-    print "To Strip : " + url
+    """
+    Strips the given url so that all characters 
+    following & are removed.
+    This is because for downloading, it causes an issue.
+    """
     ind = url.find("&")
     finalUrl = url[:ind]
     print "Striped : " + finalUrl
